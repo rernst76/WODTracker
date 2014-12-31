@@ -74,4 +74,16 @@ if (Movements.find().count() === 0) {
       type: 'number'
     }
   });
+  
+    Movements.insert({
+    name: 'Thrusters',
+    field1: {
+      label: 'Reps',
+      type: 'number'
+    },
+    field2: {
+      label: 'Weight',
+      type: 'number'
+    }
+  });
 }
