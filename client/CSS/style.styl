@@ -1,0 +1,113 @@
+vendor(prop, args)
+  -webkit-{prop} args
+  -moz-{prop} args
+  -ms-{prop} args
+  -o-{prop} args
+  {prop} args
+
+transition()
+  vendor('transition', arguments)
+  
+.container-fluid
+    margin-right auto
+    margin-left auto
+    max-width 1500px
+
+body
+  padding-top 50px
+  
+html
+  overflow-y scroll
+
+[draggable]
+  -webkit-user-select none  /* Chrome all / Safari all */
+  -moz-user-select none     /* Firefox all */
+  -ms-user-select none 
+
+.dropdown
+    padding-bottom 6px
+
+.dropdown .btn
+    width 100%
+
+.stock, .entry
+    border 2px solid black
+    border-radius 10px
+    margin-top 25px
+    padding 5px
+    
+.trash
+    border 2px solid black
+    border-radius 10px
+    margin-top 6px
+    padding 5px
+    
+.glyphicon-trash
+    font-size 2em
+    display block
+    text-align center
+
+.stock h1, .entry h1
+    text-align center
+    margin-top 3px
+    
+.stockitem
+    &.xitem
+        & .btn-group-vertical
+            float right
+
+.xitem 
+    display inline-block
+    padding 8px
+    margin 2px
+    border 2px solid black
+    border-radius 8px
+    cursor move
+    & h4
+        text-align center
+        margin 0px 3px 3px 3px
+        display inline-block
+    &.panel-body
+        display block
+        border none
+        & .btn-group-vertical
+            float right
+
+.mitem
+    cursor move
+    & p
+        display inline-block
+        margin 0px
+        text-align left
+        vertical-align middle
+    &.panel-body
+        padding 7px
+        & .btn-group-vertical
+            float none
+    & .form-control
+        width 55px
+
+.dropped
+    margin-bottom 0px
+    cursor move
+    & h4, p
+        display inline-block
+    & p
+        margin-left 3px
+
+.item-title 
+    margin-top 4px
+    
+.itemDragArea 
+    text-align left
+    padding 10px
+    margin-bottom 2px
+    
+.panel-group 
+    margin 0px
+    
+.form-inline
+    text-align right
+    margin-top 4px
+    & .input-group
+        width 130px

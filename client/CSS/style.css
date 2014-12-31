@@ -1,0 +1,115 @@
+.container-fluid {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1500px;
+}
+body {
+  padding-top: 50px;
+}
+html {
+  overflow-y: scroll;
+}
+[draggable] {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+.dropdown {
+  padding-bottom: 6px;
+}
+.dropdown .btn {
+  width: 100%;
+}
+.stock,
+.entry {
+  border: 2px solid #000;
+  border-radius: 10px;
+  margin-top: 25px;
+  padding: 5px;
+}
+.trash {
+  border: 2px solid #000;
+  border-radius: 10px;
+  margin-top: 6px;
+  padding: 5px;
+}
+.glyphicon-trash {
+  font-size: 2em;
+  display: block;
+  text-align: center;
+}
+.stock h1,
+.entry h1 {
+  text-align: center;
+  margin-top: 3px;
+}
+.stockitem.xitem .btn-group-vertical {
+  float: right;
+}
+.xitem {
+  display: inline-block;
+  padding: 8px;
+  margin: 2px;
+  border: 2px solid #000;
+  border-radius: 8px;
+  cursor: move;
+}
+.xitem h4 {
+  text-align: center;
+  margin: 0px 3px 3px 3px;
+  display: inline-block;
+}
+.xitem.panel-body {
+  display: block;
+  border: none;
+}
+.xitem.panel-body .btn-group-vertical {
+  float: right;
+}
+.mitem {
+  cursor: move;
+}
+.mitem p {
+  display: inline-block;
+  margin: 0px;
+  text-align: left;
+  vertical-align: middle;
+}
+.mitem.panel-body {
+  padding: 7px;
+}
+.mitem.panel-body .btn-group-vertical {
+  float: none;
+}
+.mitem .form-control {
+  width: 55px;
+}
+.dropped {
+  margin-bottom: 0px;
+  cursor: move;
+}
+.dropped h4,
+.dropped p {
+  display: inline-block;
+}
+.dropped p {
+  margin-left: 3px;
+}
+.item-title {
+  margin-top: 4px;
+}
+.itemDragArea {
+  text-align: left;
+  padding: 10px;
+  margin-bottom: 2px;
+}
+.panel-group {
+  margin: 0px;
+}
+.form-inline {
+  text-align: right;
+  margin-top: 4px;
+}
+.form-inline .input-group {
+  width: 130px;
+}
