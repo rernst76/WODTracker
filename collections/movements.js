@@ -1,1 +1,1 @@
-Movements = new Mongo.Collection('posts');
+Movements = new Mongo.Collection('movements');
