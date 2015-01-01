@@ -1,11 +1,9 @@
 <template name="layout">
-  <div class="container">
-    {{> header}}
-    <div class="container-fluid">
-      <div class="builder">
-        <div class="row">
-          {{> yield}}
-        </div>
+  {{> header}}
+  <div class="container-fluid">
+    <div class="builder">
+      <div class="row">
+        {{> yield}}
       </div>
     </div>
   </div>

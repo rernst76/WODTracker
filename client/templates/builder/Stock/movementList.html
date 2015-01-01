@@ -1,0 +1,12 @@
+<template name="movementList">
+  <div class="input-group">
+    <span class="input-group-addon">Filter:</span>
+    <input id="movementFilter" type="text" class="form-control" placeholder="Movement name">
+  </div>
+  <br>
+  <ul id="movementList" class="list-group">
+    {{#each movement}}
+      {{> movementItem}}
+    {{/each}}
+  </ul>
+</template>

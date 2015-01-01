@@ -1,0 +1,20 @@
+<template name="container">
+  <div class="stockitem xitem" draggable="true">
+    <div class="btn-group-vertical btn-group-xs" role="group">
+      <button type="button" class="btn btn-default moveUp">
+        <span class="glyphicon glyphicon-chevron-up" style="padding-left: 2px" aria-hidden="true"></span>
+      </button>
+      <button type="button" class="btn btn-default moveDown">
+        <span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>
+      </button>
+    </div>
+    <h4>{{name}}</h4>
+    <div class="form-group">
+      <label for="{{field.label}}">{{field.label}}</label>
+      <input type="{{field.type}}" class="form-control" id="{{field.label}}" placeholder="{{field.placeholder}}">
+    </div>
+    <div class="well itemDragArea">
+      <p class="itemDragAreaText">Drop items here</p>
+    </div>
+  </div>
+</template>
