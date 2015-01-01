@@ -1,4 +1,4 @@
-Template.builder.helpers({
+Template.stock.helpers({
   timeContainer: function() {
     return Containers.find({type: 'time'});
   },
