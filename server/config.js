@@ -1,3 +1,3 @@
 Accounts.config({
-  forbidClientAccountCreation: true
+  loginExpirationInDays: 7
 });
