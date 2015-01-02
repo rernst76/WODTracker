@@ -2,10 +2,13 @@
   <div class="entry">
       <h1>Workout</h1>
       <div class="well itemDragArea permArea">
-        <p class="itemDragAreaText">Drop items here</p>
-        {{#each item}}
-          {{> Template.dynamic template=itemType}}
-        {{/each}}
+        {{#if hasChild}}
+          {{#each item}}
+            {{> Template.dynamic template=itemType}}
+          {{/each}}
+        {{else}}
+          <p class="itemDragAreaText">Drop items here</p>
+        {{/if}}
       </div>
     </div>
 </template>

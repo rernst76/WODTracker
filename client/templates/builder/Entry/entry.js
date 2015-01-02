@@ -7,5 +7,10 @@ Template.entry.helpers({
   
   itemType: function() {
     return this.itemType;
+  },
+  
+  hasChild: function() {
+    var rootId = Session.get("rootId");
+    return !!Workout.find({parent: rootId}).count();
   }
 });
