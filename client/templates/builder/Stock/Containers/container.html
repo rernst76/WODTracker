@@ -13,8 +13,6 @@
       <label for="{{field.label}}">{{field.label}}</label>
       <input type="{{field.type}}" class="form-control" id="{{field.label}}" placeholder="{{field.placeholder}}">
     </div>
-    <div class="well itemDragArea">
-      <p class="itemDragAreaText">Drop items here</p>
-    </div>
+    {{> dragArea}}
   </div>
 </template>
