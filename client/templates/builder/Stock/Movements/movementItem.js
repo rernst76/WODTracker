@@ -1,4 +1,4 @@
-Template.container.events({
+Template.movementItem.events({
   'dragstart': function(e) {
     
   },

@@ -1,4 +1,4 @@
-Template.dragArea.events({
+Template.trashBin.events({
   'dragenter': function(e) {
     
   },
