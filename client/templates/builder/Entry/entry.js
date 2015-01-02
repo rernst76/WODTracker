@@ -1,9 +1,11 @@
-Template.entry.helpers{
-  // Helper
+Template.entry.helpers({
   item: function() {
-    
+    // Return cursor first level nodes
+    var rootId = Session.get("rootId");
+    return Workout.find({parent: rootId});
   },
+  
   itemType: function() {
-    
+    return this.itemType;
   }
-};
+});
