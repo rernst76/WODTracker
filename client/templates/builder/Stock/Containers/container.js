@@ -5,6 +5,6 @@ Template.container.events({
     
     // Store object being dragged and type in Session
     Session.set("dragObject", this);
-    Session.set("dragItemType", "container");
+    Session.set("dragObjectType", "container");
   }
 });

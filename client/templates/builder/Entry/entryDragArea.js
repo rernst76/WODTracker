@@ -25,6 +25,29 @@ Template.entryDragArea.events({
     e.preventDefault();
   },
   'drop': function(e) {
+    e.preventDefault();
+    e.stopPropagation();
     
+    // Get object and type being dragged from Session
+    var dragObject = Session.get("dragObject");
+    var dragObjectType = Session.get("dragObjectType");
+    
+    // Add relevant data to document then add to Workout collection
+    if (dragObjectType === 'movement') {
+      Workout.insert({
+        name: dragObject.name,
+        itemType: "entryMovement",
+        field1: dragObject.field1,
+        field2: dragObject.field2,
+        parent: this._id
+      });
+    }else if (dragObjectType === 'container') {
+      Workout.insert({
+        name: dragObject.name,
+        itemType: "entryContainer",
+        field: dragObject.field,
+        parent: this._id
+      });   
+    }
   }
 });
