@@ -1,4 +1,4 @@
-Template.entryContainerDragArea.helpers({
+Template.entryDragArea.helpers({
   item: function() {
     // Return cursor first level nodes
     return Workout.find({parent: this._id});
@@ -13,17 +13,16 @@ Template.entryContainerDragArea.helpers({
   }
 });
 
-Template.entryContainerDragArea.events({
-  'dragenter': function(e) {
+Template.entryDragArea.events({
+  'dragenter': function(e, temp) {
     // Prevent default event handling and stop bubbling
     e.stopPropagation();
     e.preventDefault();
   },
   'dragover': function(e) {
-    
-  },
-  'dragleave': function(e) {
-    
+    // Prevent default event handling and stop bubbling
+    e.stopPropagation();
+    e.preventDefault();
   },
   'drop': function(e) {
     

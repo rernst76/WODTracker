@@ -1,0 +1,11 @@
+<template name="entryDragArea">
+  <div class="well itemDragArea">
+    {{#if hasChild}}
+      {{#each item}} 
+        {{> Template.dynamic template=itemType}}
+      {{/each}}
+    {{else}}
+      <p class="itemDragAreaText">Drop items here</p>
+    {{/if}}
+  </div>
+</template>

@@ -7,7 +7,7 @@ Template.builder.created = function() {
     name: "workout", // Eventually allow user to set name
     date: Date(),
     gym: "Crossfit Saol", // Eventually allow user to set gym
-    parent: null
+    parent: "none"
   });
   
   console.log(id);

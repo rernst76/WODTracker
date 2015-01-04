@@ -1,14 +1,6 @@
 <template name="entry">
   <div class="entry">
       <h1>Workout</h1>
-      <div class="well itemDragArea permArea">
-        {{#if hasChild}}
-          {{#each item}}
-            {{> Template.dynamic template=itemType}}
-          {{/each}}
-        {{else}}
-          <p class="itemDragAreaText">Drop items here</p>
-        {{/if}}
-      </div>
+        {{> mainDragArea}}
     </div>
 </template>
