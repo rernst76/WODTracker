@@ -14,15 +14,7 @@
         <label for="time">Time</label>
         <input type="text" class="form-control" id="time" placeholder="Time in minutes">
       </div>
-      <div class="well itemDragArea">
-        {{#if hasChild}}
-          {{#each item}}
-            {{> Template.dynamic template=itemType}}
-          {{/each}}
-        {{else}}
-          <p class="itemDragAreaText">Drop items here</p>
-        {{/if}}
-      </div>
+        {{> entryContainerDragArea}}
     </div>
   </div>
 </template>
