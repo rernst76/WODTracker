@@ -34,6 +34,10 @@ Template.mainDragArea.events({
     var dragObject = Session.get("dragObject");
     var dragObjectType = Session.get("dragObjectType");
     
+    // Return if this isn't a valid drag
+    if (dragObject === null || dragObjectType === null)
+      return false;
+    
     // Get rootId
     var rootId = Session.get("rootId");
     
@@ -54,5 +58,8 @@ Template.mainDragArea.events({
         parent: rootId
       });   
     }
+    // Clear DnD Session variables
+    Session.set("dragObject", null);
+    Session.set("dragObjectType", null);
   }
 });
