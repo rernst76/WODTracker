@@ -9,7 +9,7 @@ Template.entryContainer.events({
     Session.set("dragObjectType", "entryMv");
   },
   // Stop propogation, don't handle default.
-  dragover: function(e) {
+  'dragover': function(e) {
     e.stopPropagation();
   }
 });
