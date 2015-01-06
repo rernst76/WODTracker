@@ -10,6 +10,9 @@ Template.trashBin.events({
     e.preventDefault();
   },
   'drop': function(e) {
-    
+    // Remove dragObject, reset Session variables
+    Workout.remove(Session.get("dragObject"));
+    Session.set("dragObject", null);
+    Session.set("dragOvjectType", null);
   }
 });
