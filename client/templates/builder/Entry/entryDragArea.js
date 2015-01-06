@@ -52,6 +52,8 @@ Template.entryDragArea.events({
         field: dragObject.field,
         parent: this._id
       });   
+    } else if (dragObjectType === 'entryMv') {
+      console.log(Workout.update(dragObject, {$set: {parent: this._id}}));
     }
     
     // Clear DnD Session variables

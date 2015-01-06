@@ -6,6 +6,6 @@ Template.entryMovement.events({
     
     // Store object being dragged and type in Session
     Session.set("dragObject", this);
-    Session.set("dragObjectType", "movement");
+    Session.set("dragObjectType", "entryMv");
   }
 });
