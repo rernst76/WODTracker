@@ -20,13 +20,18 @@ Template.entryDragArea.events({
     e.preventDefault();
   },
   'dragover': function(e) {
-    // Prevent default event handling and stop bubbling
+    // stop bubbling
     e.stopPropagation();
-    e.preventDefault();
+    var dragObject = Session.get("dragObject");
+    // Prevent default if this is a valid drop area and not itself
+    if(dragObject._id !== this._id)
+      e.preventDefault();
   },
   'drop': function(e) {
     e.preventDefault();
     e.stopPropagation();
+    console.log("drop into:");
+    console.log(this);
     
     // Get object and type being dragged from Session
     var dragObject = Session.get("dragObject");
@@ -53,7 +58,7 @@ Template.entryDragArea.events({
         parent: this._id
       });   
     } else if (dragObjectType === 'entryMv') {
-      console.log(Workout.update(dragObject, {$set: {parent: this._id}}));
+      Workout.update(dragObject, {$set: {parent: this._id}});
     }
     
     // Clear DnD Session variables
