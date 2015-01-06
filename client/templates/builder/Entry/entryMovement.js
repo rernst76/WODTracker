@@ -7,5 +7,9 @@ Template.entryMovement.events({
     // Store object being dragged and type in Session
     Session.set("dragObject", this);
     Session.set("dragObjectType", "entryMv");
+  },
+  // Stop propogation, don't handle default.
+  dragover: function(e) {
+    e.stopPropagation();
   }
 });
