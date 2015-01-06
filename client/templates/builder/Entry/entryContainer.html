@@ -9,10 +9,10 @@
           <span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>
         </button>
       </div>
-      <h4>AMRAP (Rounds)</h4>
+      <h4>{{name}}</h4>
       <div class="form-group">
-        <label for="time">Time</label>
-        <input type="text" class="form-control" id="time" placeholder="Time in minutes">
+        <label for="{{field.label}}">{{field.label}}</label>
+        <input type="{{field.type}}" class="form-control" id="{{field.label}}" placeholder="{{field.placeholder}}">
       </div>
         {{> entryDragArea}}
     </div>
