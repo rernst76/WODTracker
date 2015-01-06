@@ -63,9 +63,9 @@ if (Containers.find().count() === 0) {
     type: 'misc',
     name: 'Chipper',
     field: {
-      label: '',
-      type: '',
-      placeholder: ''
+      label: 'Name (optional)',
+      type: 'text',
+      placeholder: 'Name'
     },
   });
   
