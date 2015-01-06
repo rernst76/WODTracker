@@ -2,7 +2,7 @@ Template.mainDragArea.helpers({
   item: function() {
     // Return cursor first level nodes
     var rootId = Session.get("rootId");
-    return Workout.find({parent: rootId});
+    return Workout.find({parent: rootId}, {sort: {order: -1}});
   },
   
   itemType: function() {

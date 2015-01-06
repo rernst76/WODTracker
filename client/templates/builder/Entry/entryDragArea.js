@@ -1,7 +1,7 @@
 Template.entryDragArea.helpers({
   item: function() {
     // Return cursor first level nodes
-    return Workout.find({parent: this._id});
+    return Workout.find({parent: this._id}, {sort: {order: -1}});
   },
   
   itemType: function() {
@@ -41,6 +41,7 @@ Template.entryDragArea.events({
     if (dragObject === null || dragObjectType === null)
       return false;
     
+    var count = Workout.find({parent: this._id}).count();
     // Add relevant data to document then add to Workout collection
     if (dragObjectType === 'movement') {
       Workout.insert({
@@ -48,6 +49,7 @@ Template.entryDragArea.events({
         itemType: "entryMovement",
         field1: dragObject.field1,
         field2: dragObject.field2,
+        order: count,
         parent: this._id
       });
     }else if (dragObjectType === 'container') {
@@ -55,6 +57,7 @@ Template.entryDragArea.events({
         name: dragObject.name,
         itemType: "entryContainer",
         field: dragObject.field,
+        order: count,
         parent: this._id
       });   
     } else if (dragObjectType === 'entryMv') {
