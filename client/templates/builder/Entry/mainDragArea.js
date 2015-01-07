@@ -46,6 +46,7 @@ Template.mainDragArea.events({
     // Get rootId
     var rootId = Session.get("rootId");
     
+    var count = Workout.find({parent: rootId}).count();
     // Add relevant data to document then add to Workout collection
     if (dragObjectType === 'movement') {
       Workout.insert({
@@ -53,6 +54,7 @@ Template.mainDragArea.events({
         itemType: "entryMovement",
         field1: dragObject.field1,
         field2: dragObject.field2,
+        order: count,
         parent: rootId
       });
     }else if (dragObjectType === 'container') {
@@ -60,6 +62,7 @@ Template.mainDragArea.events({
         name: dragObject.name,
         itemType: "entryContainer",
         field: dragObject.field,
+        order: count,
         parent: rootId
       });   
     } else if (dragObjectType === 'entryMv') {
