@@ -1,7 +1,7 @@
 Template.entryDragArea.helpers({
   item: function() {
     // Return cursor first level nodes
-    return Workout.find({parent: this._id}, {sort: {order: -1}});
+    return Workout.find({parent: this._id}, {sort: {order: 1}});
   },
   
   itemType: function() {
