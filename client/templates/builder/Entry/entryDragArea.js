@@ -30,8 +30,6 @@ Template.entryDragArea.events({
   'drop': function(e) {
     e.preventDefault();
     e.stopPropagation();
-    console.log("drop into:");
-    console.log(this);
     
     // Get object and type being dragged from Session
     var dragObject = Session.get("dragObject");
