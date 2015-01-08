@@ -66,7 +66,21 @@ Template.mainDragArea.events({
         parent: rootId
       });   
     } else if (dragObjectType === 'entryMv') {
-      Workout.update(dragObject, {$set: {parent: rootId}});
+      // Update order values of sibling elements
+      Workout.update(
+        // Get siblings with order greater than the dragged objects order
+      {
+        parent: dragObject.parent,
+        order: {$gt: dragObject.order}
+      },
+        // Decrement any siblings we get from preceeding query
+      {$inc: {order: -1}},
+        // Allow multiple documents to be updated
+      {multi: true}
+      );
+      
+      // Update parent to move object
+      Workout.update(dragObject, {$set: {parent: rootId, order: count}});
     }
     // Clear DnD Session variables
     Session.set("dragObject", null);
