@@ -6,9 +6,9 @@ Template.movementList.helpers({
 });
 
 Template.movementList.events({
-  "keyup #movementFilter": function(e, template) {
+  "keyup #movementFilter": function(e) {
     var $listItems = $('#movementList li');
-    var re = new RegExp($(e.target).val(), "i"); // "i" means it's case-insensitive
+    var re = new RegExp($(e.target).val(), "i"); // "i" sets case-insensitive
     $listItems.show().filter(function() {
       return !re.test($(this).find('p').text());
     }).hide();
