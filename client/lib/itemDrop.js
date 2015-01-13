@@ -33,6 +33,7 @@ itemDrop = function(e) {
       // Check if the dropped item already exists in this parent, return if so
       if (this._id === dragObject.parent)
         return false;
+        
       // Update order values of sibling elements
       Workout.update(
         // Get siblings with order greater than the dragged objects order
