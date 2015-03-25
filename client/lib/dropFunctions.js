@@ -1,3 +1,5 @@
+/* global itemDrop: true */
+
 itemDrop = function(e) {
     e.preventDefault();
     e.stopPropagation();
@@ -7,8 +9,9 @@ itemDrop = function(e) {
     var dragObjectType = Session.get("dragObjectType");
     
     // Return if this isn't a valid drag
-    if (dragObject === null || dragObjectType === null)
+    if (dragObject === null || dragObjectType === null){
       return false;
+    }
     
     var count = Workout.find({parent: this._id}).count();
     // Add relevant data to document then add to Workout collection
@@ -31,8 +34,9 @@ itemDrop = function(e) {
       });   
     } else if (dragObjectType === 'entryMv') {
       // Check if the dropped item already exists in this parent, return if so
-      if (this._id === dragObject.parent)
+      if (this._id === dragObject.parent) {
         return false;
+      }
         
       // Update order values of sibling elements
       Workout.update(
@@ -54,4 +58,4 @@ itemDrop = function(e) {
     // Clear DnD Session variables
     Session.set("dragObject", null);
     Session.set("dragObjectType", null);
-  }
+  };

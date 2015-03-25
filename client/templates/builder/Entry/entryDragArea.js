@@ -1,3 +1,5 @@
+/* global itemDrop */
+
 Template.entryDragArea.helpers({
   item: function() {
     // Return cursor first level nodes
@@ -14,7 +16,7 @@ Template.entryDragArea.helpers({
 });
 
 Template.entryDragArea.events({
-  'dragenter': function(e, temp) {
+  'dragenter': function(e) {
     // Prevent default event handling and stop bubbling
     e.stopPropagation();
     e.preventDefault();
@@ -24,8 +26,9 @@ Template.entryDragArea.events({
     e.stopPropagation();
     var dragObject = Session.get("dragObject");
     // Prevent default if this is a valid drop area and not itself
-    if(dragObject._id !== this._id)
+    if(dragObject._id !== this._id){
       e.preventDefault();
+    }
   },
   'drop': itemDrop
 });

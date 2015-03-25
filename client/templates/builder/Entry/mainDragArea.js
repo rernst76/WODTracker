@@ -16,7 +16,7 @@ Template.mainDragArea.helpers({
 });
 
 Template.mainDragArea.events({
-  'dragenter': function(e, temp) {
+  'dragenter': function(e) {
     // Prevent default event handling and stop bubbling
     e.stopPropagation();
     e.preventDefault();
@@ -26,8 +26,9 @@ Template.mainDragArea.events({
     e.stopPropagation();
     // Prevent default if this is a valid drop area and not itself
     var dragObject = Session.get("dragObject");
-    if(dragObject._id !== this._id)
+    if(dragObject._id !== this._id){
       e.preventDefault();
+    }
   },
   'drop': function(e) {
     e.preventDefault();
@@ -40,8 +41,9 @@ Template.mainDragArea.events({
     var dragObjectType = Session.get("dragObjectType");
     
     // Return if this isn't a valid drag
-    if (dragObject === null || dragObjectType === null)
+    if (dragObject === null || dragObjectType === null){
       return false;
+    }
     
     // Get rootId
     var rootId = Session.get("rootId");

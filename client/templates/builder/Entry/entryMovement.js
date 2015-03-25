@@ -13,10 +13,11 @@ Template.entryMovement.events({
     e.stopPropagation();
   },
   // Handle click to move movement up in list, decrement order val
-  'click .moveUp': function(e) {
+  'click .moveUp': function() {
     // Make sure this.order is not already at 0
-    if(this.order <= 0)
-      return false
+    if(this.order <= 0){
+      return false;
+    }
       
     // Swap order with item above
     Workout.update({parent: this.parent, order: this.order - 1},
@@ -26,10 +27,11 @@ Template.entryMovement.events({
     Workout.update(this, {$set: {order: this.order - 1}});
   },
   // Handle click to move movement down in list, increment order val
-  'click .moveDown': function(e) {
+  'click .moveDown': function() {
     // Make sure this.order is not already at count()-1
-    if(this.order >= Workout.find({parent: this.parent}).count() - 1)
-      return false
+    if(this.order >= Workout.find({parent: this.parent}).count() - 1){
+      return false;
+    }
       
     // Swap order with item below
     Workout.update({parent: this.parent, order: this.order + 1},
