@@ -1,0 +1,196 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 117.0,
+		"last_filter": "Package Control:in",
+		"selected_items":
+		[
+			[
+				"Package Control:in",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 467.0
+	},
+	"console":
+	{
+		"height": 139.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/ryan/dev/WODTracker",
+		"/home/ryan/dev/WODTracker/client"
+	],
+	"file_history":
+	[
+		"/home/ryan/dev/WODTracker/WODTracker.sublime-project",
+		"/home/ryan/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
+		"/home/ryan/.config/sublime-text-3/Packages/Default/Preferences.sublime-settings",
+		"/home/ryan/dev/WODTracker/client/templates/builder/Stock/Movements/movementList.js",
+		"/home/ryan/dev/WODTracker/client/templates/builder/builder.js",
+		"/home/ryan/dev/WODTracker/client/templates/builder/Entry/mainDragArea.js",
+		"/home/ryan/dev/WODTracker/client/templates/builder/Entry/entryMovement.js",
+		"/home/ryan/dev/WODTracker/client/templates/builder/Entry/entryContainer.js",
+		"/home/ryan/.config/sublime-text-3/Packages/User/SublimeLinter.sublime-settings",
+		"/home/ryan/dev/WODTracker/client/templates/builder/Entry/entryDragArea.html",
+		"/home/ryan/dev/WODTracker/client/templates/builder/Entry/entryDragArea.js",
+		"/home/ryan/dev/WODTracker/collections/containers.js",
+		"/home/ryan/dev/WODTracker/client/lib/dropFunctions.js",
+		"/home/ryan/dev/WODTracker/.jshintrc",
+		"/home/ryan/dev/WODTracker/client/lib/itemDrop.js",
+		"/home/ryan/dev/PetSponsor/app/client/templates/home/home.html",
+		"/home/ryan/dev/PetSponsor/app/client/head.html"
+	],
+	"find":
+	{
+		"height": 23.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"itemDrop"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 33.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "WODTracker.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 292.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
