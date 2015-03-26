@@ -1,4 +1,4 @@
-/* global Workout:true */
+/* global Workout:true, Gyms */
 
 Template.builder.created = function() {
   // Create local collection to store workout being built
