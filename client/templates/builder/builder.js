@@ -17,3 +17,16 @@ Template.builder.created = function() {
   // Store workout id in Session as workout root
   Session.set("rootId", id);
 };
+
+Template.builder.helpers({
+  settings: function() {
+    return {
+      limit: 5,
+      rules: [{
+        collection: Gyms,
+        field: "name",
+        template: Template.gymItem
+      }]
+    };
+  }
+});
