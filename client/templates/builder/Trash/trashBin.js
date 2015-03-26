@@ -31,5 +31,8 @@ Template.trashBin.events({
   },
   'click #trashBin': function () {
     $('#trashModal').modal('show');
+  },
+  'click #deleteWorkout': function() {
+    Workout.remove({_id: {$ne: Session.get('rootId')}});
   }
 });
