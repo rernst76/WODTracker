@@ -2,8 +2,11 @@
 
 Template.entryDragArea.helpers({
   item: function() {
+    // Set parent ID
+    var parentID = this._id || Session.get("rootId");
+
     // Return cursor first level nodes
-    return Workout.find({parent: this._id}, {sort: {order: 1}});
+    return Workout.find({parent: parentID}, {sort: {order: 1}});
   },
   
   itemType: function() {
@@ -11,7 +14,9 @@ Template.entryDragArea.helpers({
   },
   
   hasChild: function() {
-    return !!Workout.find({parent: this._id}).count();
+    // Set parent ID
+    var parentID = this._id || Session.get("rootId");
+    return !!Workout.find({parent: parentID}).count();
   }
 });
 

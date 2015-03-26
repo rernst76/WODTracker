@@ -3,6 +3,9 @@
 itemDrop = function(e) {
     e.preventDefault();
     e.stopPropagation();
+
+    // Set parent ID
+    var parentID = this._id || Session.get("rootId");
     
     // Get object and type being dragged from Session
     var dragObject = Session.get("dragObject");
@@ -13,7 +16,7 @@ itemDrop = function(e) {
       return false;
     }
     
-    var count = Workout.find({parent: this._id}).count();
+    var count = Workout.find({parent: parentID}).count();
     // Add relevant data to document then add to Workout collection
     if (dragObjectType === 'movement') {
       Workout.insert({
@@ -22,7 +25,7 @@ itemDrop = function(e) {
         field1: dragObject.field1,
         field2: dragObject.field2,
         order: count,
-        parent: this._id
+        parent: parentID
       });
     }else if (dragObjectType === 'container') {
       Workout.insert({
@@ -30,11 +33,11 @@ itemDrop = function(e) {
         itemType: "entryContainer",
         field: dragObject.field,
         order: count,
-        parent: this._id
+        parent: parentID
       });   
     } else if (dragObjectType === 'entryMv') {
       // Check if the dropped item already exists in this parent, return if so
-      if (this._id === dragObject.parent) {
+      if (parentID === dragObject.parent) {
         return false;
       }
         
@@ -52,7 +55,7 @@ itemDrop = function(e) {
       );
       
       // Update parent to move object
-      Workout.update(dragObject, {$set: {parent: this._id, order: count}});
+      Workout.update(dragObject, {$set: {parent: parentID, order: count}});
     }
     
     // Clear DnD Session variables
