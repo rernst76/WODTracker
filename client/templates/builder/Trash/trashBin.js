@@ -9,7 +9,7 @@ Template.trashBin.events({
     e.stopPropagation();
     e.preventDefault();
   },
-  'drop': function(e) {
+  'drop': function() {
     // Remove dragObject, reset Session variables
     var dragObject = Session.get("dragObject");
     Workout.remove(dragObject);
@@ -28,5 +28,8 @@ Template.trashBin.events({
       );
     Session.set("dragObject", null);
     Session.set("dragOvjectType", null);
+  },
+  'click #trashBin': function () {
+    $('#trashModal').modal('show');
   }
 });
