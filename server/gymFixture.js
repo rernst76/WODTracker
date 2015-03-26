@@ -1,3 +1,4 @@
+/*global Gyms*/
 if (Gyms.find().count() === 0) {
 	Gyms.insert({
 		name: 'CrossFit Saol',
