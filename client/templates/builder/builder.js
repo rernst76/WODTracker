@@ -1,6 +1,6 @@
 /* global Workout:true, Gyms */
 
-Template.builder.created = function() {
+Template.builder.onCreated( function() {
   // Create local collection to store workout being built
   Workout = new Mongo.Collection(null);
   
@@ -16,9 +16,10 @@ Template.builder.created = function() {
   
   // Store workout id in Session as workout root
   Session.set("rootId", id);
-};
+});
 
 Template.builder.helpers({
+  // Settings for gymName autocomplete
   settings: function() {
     return {
       limit: 5,
