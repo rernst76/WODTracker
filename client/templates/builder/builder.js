@@ -6,9 +6,6 @@ Template.builder.onCreated( function() {
   
   // Insert empty workout into local collection
   var id = Workout.insert({
-    name: "workout", // Eventually allow user to set name
-    date: Date(),
-    gym: "Crossfit Saol", // Eventually allow user to set gym
     parent: "none"
   });
   
@@ -29,5 +26,18 @@ Template.builder.helpers({
         template: Template.gymItem
       }]
     };
+  }
+});
+
+Template.builder.events({
+  'click #saveWorkout': function() {
+    var rootId = Session.get('rootId');
+    var workoutName = $('#workoutName').val();
+    var gymName = $('#gymName').val();
+    Workout.update({_id: rootId}, {$set: {name: workoutName,
+                                           gym: gymName,
+                                           date: new Date() }});
+    Meteor.call('insertWorkout', Workout.find().fetch());
+    
   }
 });
