@@ -5,7 +5,8 @@ if (Containers.find().count() === 0) {
     field: {
       label: 'Time',
       type: 'text',
-      placeholder: 'Time in minutes'
+      placeholder: 'Time in minutes',
+      value: ''
     },
   });
   
@@ -15,7 +16,8 @@ if (Containers.find().count() === 0) {
     field: {
       label: 'Time',
       type: 'text',
-      placeholder: 'Time in minutes'
+      placeholder: 'Time in minutes',
+      value: ''
     },
   });
   
@@ -25,7 +27,8 @@ if (Containers.find().count() === 0) {
     field: {
       label: 'Time',
       type: 'text',
-      placeholder: 'Time in minutes'
+      placeholder: 'Time in minutes',
+      value: ''
     },
   });
   
@@ -35,7 +38,8 @@ if (Containers.find().count() === 0) {
     field: {
       label: 'Number of Rounds',
       type: 'number',
-      placeholder: 'Number of Rounds'
+      placeholder: 'Number of Rounds',
+      value: ''
     },
   });
   
@@ -45,7 +49,8 @@ if (Containers.find().count() === 0) {
     field: {
       label: 'Rep Scheme',
       type: 'text',
-      placeholder: 'ex: 21/15/9'
+      placeholder: 'ex: 21/15/9',
+      value: ''
     },
   });
   
@@ -55,7 +60,8 @@ if (Containers.find().count() === 0) {
     field: {
       label: 'Part Name',
       type: 'text',
-      placeholder: 'ex: Part A'
+      placeholder: 'ex: Part A',
+      value: ''
     },
   });
   
@@ -65,7 +71,8 @@ if (Containers.find().count() === 0) {
     field: {
       label: 'Name (optional)',
       type: 'text',
-      placeholder: 'Name'
+      placeholder: 'Name',
+      value: ''
     },
   });
   
@@ -75,7 +82,8 @@ if (Containers.find().count() === 0) {
     field: {
       label: 'Start/End/Increment',
       type: 'text',
-      placeholder: 'ex: 10/1/-1'
+      placeholder: 'ex: 10/1/-1',
+      value: ''
     },
   });
   

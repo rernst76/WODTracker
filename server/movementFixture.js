@@ -4,10 +4,12 @@ if (Movements.find().count() === 0) {
     field1: {
       label: 'Reps',
       type: 'text',
+      value: ''
     },
     field2: {
       label: 'Weight',
-      type: 'text'
+      type: 'text',
+      value: ''
     }
   });
   
@@ -16,10 +18,12 @@ if (Movements.find().count() === 0) {
     field1: {
       label: 'Reps',
       type: 'text',
+      value: ''
     },
     field2: {
       label: 'Weight',
-      type: 'text'
+      type: 'text',
+      value: ''
     }
   });
   
@@ -28,6 +32,7 @@ if (Movements.find().count() === 0) {
     field1: {
       label: 'Reps',
       type: 'text',
+      value: ''
     },
     field2: {
       label: 'Scale',
@@ -43,7 +48,8 @@ if (Movements.find().count() === 0) {
         'Purple Band',
         'Negatives',
         'Jumping'
-        ]
+        ],
+      value: ''
     }
   });
   
@@ -52,6 +58,7 @@ if (Movements.find().count() === 0) {
     field1: {
       label: 'Reps',
       type: 'text',
+      value: ''
     },
     field2: {
       label: 'Scale',
@@ -59,7 +66,8 @@ if (Movements.find().count() === 0) {
       options: [
         'Box',
         'Racked Bar'
-        ]
+        ],
+      value: ''
     }
   });
   
@@ -67,11 +75,13 @@ if (Movements.find().count() === 0) {
     name: 'Kettle Bell Swings',
     field1: {
       label: 'Reps',
-      type: 'text'
+      type: 'text',
+      value: ''
     },
     field2: {
       label: 'Weight',
-      type: 'text'
+      type: 'text',
+      value: ''
     }
   });
   
@@ -79,11 +89,13 @@ if (Movements.find().count() === 0) {
     name: 'Thrusters',
     field1: {
       label: 'Reps',
-      type: 'text'
+      type: 'text',
+      value: ''
     },
     field2: {
       label: 'Weight',
-      type: 'text'
+      type: 'text',
+      value: ''
     }
   });
 }

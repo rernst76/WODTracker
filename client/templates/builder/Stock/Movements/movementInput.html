@@ -3,28 +3,28 @@
         <div class="form-group">
             <div class="input-group">
                 {{#if isSelect field1.type}}
-                    <select class="form-control">
+                    <select class="form-control" value="{{field1.value}}">
                         {{#each field1.options}}
                             <option value="{{this}}">{{this}}</option>
                         {{/each}}
                     </select>
                 {{else}}
                     <span class="input-group-addon">{{field1.label}}</span>
-                    <input type="{{field1.type}}" class="form-control" id="{{field1.label}}">
+                    <input type="{{field1.type}}" class="form-control" id="{{field1.label}}" value="{{field1.value}}">
                 {{/if}}
             </div>
         </div>
         <div class="form-group">
             <div class="input-group">
                 {{#if isSelect field2.type}}
-                    <select class="form-control">
+                    <select class="form-control" value="{{field2.value}}">
                         {{#each field2.options}}
-                            <option value="{{this}}">{{this}}</option>
+                            <option value="{{this}}"></option>
                         {{/each}}
                     </select>
                 {{else}}
                     <span class="input-group-addon">{{field2.label}}</span>
-                    <input type="{{field2.type}}" class="form-control" id="{{field2.label}}">
+                    <input type="{{field2.type}}" class="form-control" id="{{field2.label}}" value="{{field2.value}}">
                 {{/if}}
             </div>
         </div>

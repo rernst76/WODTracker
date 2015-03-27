@@ -1,4 +1,4 @@
-/* global Workout:true, Gyms */
+/* global Workout:true, Gyms, throwError */
 
 Template.builder.onCreated( function() {
   // Create local collection to store workout being built
@@ -6,7 +6,7 @@ Template.builder.onCreated( function() {
   
   // Insert empty workout into local collection
   var id = Workout.insert({
-    parent: "none"
+    parent: "root"
   });
   
   console.log(id);
@@ -37,7 +37,12 @@ Template.builder.events({
     Workout.update({_id: rootId}, {$set: {name: workoutName,
                                            gym: gymName,
                                            date: new Date() }});
-    Meteor.call('insertWorkout', Workout.find().fetch());
+    Meteor.call('insertWorkout', Workout.find().fetch(), rootId, 
+      function(error) {
+      if(error) {
+        return throwError(error.reason);
+      }
+    });
     
   }
 });
