@@ -73,6 +73,7 @@ Template.builder.events({
       if(error) {
         return throwError(error.reason);
       }
+      Workout.remove({}); // On success clear workout
     });
     
   }
