@@ -3,13 +3,11 @@ if (Movements.find().count() === 0) {
     name: 'Back Squat',
     field1: {
       label: 'Reps',
-      type: 'text',
-      value: ''
+      type: 'text'
     },
     field2: {
       label: 'Weight',
-      type: 'text',
-      value: ''
+      type: 'text'
     }
   });
   
@@ -17,13 +15,11 @@ if (Movements.find().count() === 0) {
     name: 'Front Squat',
     field1: {
       label: 'Reps',
-      type: 'text',
-      value: ''
+      type: 'text'
     },
     field2: {
       label: 'Weight',
-      type: 'text',
-      value: ''
+      type: 'text'
     }
   });
   
@@ -31,8 +27,7 @@ if (Movements.find().count() === 0) {
     name: 'Pull-Ups',
     field1: {
       label: 'Reps',
-      type: 'text',
-      value: ''
+      type: 'text'
     },
     field2: {
       label: 'Scale',
@@ -48,8 +43,7 @@ if (Movements.find().count() === 0) {
         'Purple Band',
         'Negatives',
         'Jumping'
-        ],
-      value: ''
+        ]
     }
   });
   
@@ -57,8 +51,7 @@ if (Movements.find().count() === 0) {
     name: 'Push-Ups',
     field1: {
       label: 'Reps',
-      type: 'text',
-      value: ''
+      type: 'text'
     },
     field2: {
       label: 'Scale',
@@ -66,8 +59,7 @@ if (Movements.find().count() === 0) {
       options: [
         'Box',
         'Racked Bar'
-        ],
-      value: ''
+        ]
     }
   });
   
@@ -75,13 +67,11 @@ if (Movements.find().count() === 0) {
     name: 'Kettle Bell Swings',
     field1: {
       label: 'Reps',
-      type: 'text',
-      value: ''
+      type: 'text'
     },
     field2: {
       label: 'Weight',
-      type: 'text',
-      value: ''
+      type: 'text'
     }
   });
   
@@ -89,13 +79,11 @@ if (Movements.find().count() === 0) {
     name: 'Thrusters',
     field1: {
       label: 'Reps',
-      type: 'text',
-      value: ''
+      type: 'text'
     },
     field2: {
       label: 'Weight',
-      type: 'text',
-      value: ''
+      type: 'text'
     }
   });
 }

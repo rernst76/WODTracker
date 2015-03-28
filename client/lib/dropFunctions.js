@@ -31,7 +31,7 @@ itemDrop = function(e) {
       Workout.insert({
         name: dragObject.name,
         itemType: "entryContainer",
-        field: dragObject.field,
+        field1: dragObject.field1,
         order: count,
         parent: parentID
       });   
