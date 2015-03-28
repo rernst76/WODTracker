@@ -33,12 +33,30 @@ Template.builder.events({
   'click #saveWorkout': function(e,template) {
     var rootId = Session.get('rootId');
 
-    // Set gym and date
+    // Generate depth array, and insert root field for easier querying
+    var depth = Workout.find({_id: {$ne: rootId}}).map(function(obj) {
+      // Depth array
+      var depthArr = [obj._id, 0];
+      var tempObj = obj;
+      while (tempObj.parent !== rootId) {
+        tempObj = Workout.findOne({_id: tempObj.parent});
+        depthArr[1]++;
+      }
+
+      // Add root attribute
+      Workout.update(obj,{$set: {root: rootId}});
+
+      return depthArr;
+    });
+
+    depth = _.object(depth);
+    
     var workoutName = $('#workoutName').val();
     var gymName = $('#gymName').val();
     Workout.update({_id: rootId}, {$set: {name: workoutName,
                                            gym: gymName,
-                                           date: new Date() }});
+                                           date: new Date(),
+                                           depth: depth }});
 
     // Get values
     Workout.find({_id: {$ne: rootId}}).forEach(function(obj){
