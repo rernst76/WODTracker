@@ -2,7 +2,7 @@ if (Containers.find().count() === 0) {
   Containers.insert({
     type: 'time',
     name: 'AMRAP (Rounds)',
-    field: {
+    field1: {
       label: 'Time',
       type: 'text',
       placeholder: 'Time in minutes',
@@ -13,7 +13,7 @@ if (Containers.find().count() === 0) {
   Containers.insert({
     type: 'time',
     name: 'AMRAP (Reps)',
-    field: {
+    field1: {
       label: 'Time',
       type: 'text',
       placeholder: 'Time in minutes',
@@ -24,7 +24,7 @@ if (Containers.find().count() === 0) {
   Containers.insert({
     type: 'time',
     name: 'EMOM',
-    field: {
+    field1: {
       label: 'Time',
       type: 'text',
       placeholder: 'Time in minutes',
@@ -35,7 +35,7 @@ if (Containers.find().count() === 0) {
   Containers.insert({
     type: 'repRound',
     name: 'Rounds for Time',
-    field: {
+    field1: {
       label: 'Number of Rounds',
       type: 'number',
       placeholder: 'Number of Rounds',
@@ -46,7 +46,7 @@ if (Containers.find().count() === 0) {
   Containers.insert({
     type: 'repRound',
     name: 'Rep Scheme',
-    field: {
+    field1: {
       label: 'Rep Scheme',
       type: 'text',
       placeholder: 'ex: 21/15/9',
@@ -57,7 +57,7 @@ if (Containers.find().count() === 0) {
   Containers.insert({
     type: 'misc',
     name: 'Sub-Workout',
-    field: {
+    field1: {
       label: 'Part Name',
       type: 'text',
       placeholder: 'ex: Part A',
@@ -68,7 +68,7 @@ if (Containers.find().count() === 0) {
   Containers.insert({
     type: 'misc',
     name: 'Chipper',
-    field: {
+    field1: {
       label: 'Name (optional)',
       type: 'text',
       placeholder: 'Name',
@@ -79,7 +79,7 @@ if (Containers.find().count() === 0) {
   Containers.insert({
     type: 'misc',
     name: 'Ladder',
-    field: {
+    field1: {
       label: 'Start/End/Increment',
       type: 'text',
       placeholder: 'ex: 10/1/-1',
