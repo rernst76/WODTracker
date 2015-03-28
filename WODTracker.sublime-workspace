@@ -11,7 +11,47 @@
 			"file": "lib/methods/builderMethods.js",
 			"settings":
 			{
-				"buffer_size": 727,
+				"buffer_size": 944,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "server/movementFixture.js",
+			"settings":
+			{
+				"buffer_size": 1403,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "client/templates/builder/Stock/Containers/container.html",
+			"settings":
+			{
+				"buffer_size": 772,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "client/templates/builder/Entry/entryContainer.html",
+			"settings":
+			{
+				"buffer_size": 909,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "client/templates/builder/Stock/Movements/movementInput.html",
+			"settings":
+			{
+				"buffer_size": 1311,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "client/lib/dropFunctions.js",
+			"settings":
+			{
+				"buffer_size": 1955,
 				"line_ending": "Unix"
 			}
 		},
@@ -19,47 +59,15 @@
 			"file": "client/templates/builder/builder.js",
 			"settings":
 			{
-				"buffer_size": 1174,
+				"buffer_size": 1471,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "client/helpers/errors.js",
+			"file": "client/templates/builder/Stock/Movements/movementInput.js",
 			"settings":
 			{
-				"buffer_size": 152,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "client/templates/application/layout.html",
-			"settings":
-			{
-				"buffer_size": 123,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "client/templates/includes/errors.html",
-			"settings":
-			{
-				"buffer_size": 294,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "client/CSS/builder.styl",
-			"settings":
-			{
-				"buffer_size": 1969,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "client/CSS/errors.styl",
-			"settings":
-			{
-				"buffer_size": 280,
+				"buffer_size": 238,
 				"line_ending": "Unix"
 			}
 		}
@@ -117,14 +125,29 @@
 		"/home/ryan/dev/WODTracker/client/templates",
 		"/home/ryan/dev/WODTracker/client/templates/application",
 		"/home/ryan/dev/WODTracker/client/templates/builder",
+		"/home/ryan/dev/WODTracker/client/templates/builder/Entry",
+		"/home/ryan/dev/WODTracker/client/templates/builder/Stock",
+		"/home/ryan/dev/WODTracker/client/templates/builder/Stock/Containers",
+		"/home/ryan/dev/WODTracker/client/templates/builder/Stock/Movements",
 		"/home/ryan/dev/WODTracker/client/templates/includes",
+		"/home/ryan/dev/WODTracker/collections",
 		"/home/ryan/dev/WODTracker/lib",
-		"/home/ryan/dev/WODTracker/lib/methods"
+		"/home/ryan/dev/WODTracker/lib/methods",
+		"/home/ryan/dev/WODTracker/server"
 	],
 	"file_history":
 	[
-		"/home/ryan/.config/sublime-text-3/Packages/User/Stylus.sublime-settings",
+		"/home/ryan/dev/WODTracker/server/containerFixture.js",
+		"/home/ryan/dev/WODTracker/server/movementFixture.js",
+		"/home/ryan/dev/WODTracker/client/templates/builder/Stock/Movements/movementInput.html",
+		"/home/ryan/dev/WODTracker/client/templates/application/layout.html",
+		"/home/ryan/dev/WODTracker/client/helpers/errors.js",
+		"/home/ryan/dev/WODTracker/client/CSS/errors.styl",
+		"/home/ryan/dev/WODTracker/client/CSS/builder.styl",
+		"/home/ryan/dev/WODTracker/client/templates/builder/Entry/entryContainer.html",
 		"/home/ryan/dev/WODTracker/client/templates/includes/errors.html",
+		"/home/ryan/.config/sublime-text-3/Packages/Stylus/Stylus.sublime-settings",
+		"/home/ryan/.config/sublime-text-3/Packages/User/Stylus.sublime-settings",
 		"/home/ryan/dev/WODTracker/client/templates/includes/errors.js",
 		"/home/ryan/dev/WODTracker/WODTracker.sublime-project",
 		"/home/ryan/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
@@ -146,7 +169,7 @@
 	],
 	"find":
 	{
-		"height": 35.0
+		"height": 25.0
 	},
 	"find_in_files":
 	{
@@ -181,7 +204,7 @@
 	"groups":
 	[
 		{
-			"selected": 5,
+			"selected": 3,
 			"sheets":
 			[
 				{
@@ -190,15 +213,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 727,
+						"buffer_size": 944,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								504,
-								504
+								906,
+								906
 							]
 						],
 						"settings":
@@ -214,19 +237,19 @@
 				},
 				{
 					"buffer": 1,
-					"file": "client/templates/builder/builder.js",
+					"file": "server/movementFixture.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1174,
+						"buffer_size": 1403,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1144,
-								1144
+								1389,
+								1389
 							]
 						],
 						"settings":
@@ -236,7 +259,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 204.0,
+						"translation.y": 918.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 5,
@@ -244,25 +267,26 @@
 				},
 				{
 					"buffer": 2,
-					"file": "client/helpers/errors.js",
+					"file": "client/templates/builder/Stock/Containers/container.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 152,
+						"buffer_size": 772,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								149,
-								149
+								721,
+								721
 							]
 						],
 						"settings":
 						{
-							"open_with_edit": true,
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -273,81 +297,25 @@
 				},
 				{
 					"buffer": 3,
-					"file": "client/templates/application/layout.html",
+					"file": "client/templates/builder/Entry/entryContainer.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 123,
+						"buffer_size": 909,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								54,
-								54
+								779,
+								779
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "client/templates/includes/errors.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 294,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								100,
-								100
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "client/CSS/builder.styl",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1969,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								108,
-								108
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage",
-							"tab_size": 4,
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
@@ -358,32 +326,121 @@
 					"type": "text"
 				},
 				{
-					"buffer": 6,
-					"file": "client/CSS/errors.styl",
-					"semi_transient": false,
+					"buffer": 4,
+					"file": "client/templates/builder/Stock/Movements/movementInput.html",
+					"semi_transient": true,
 					"settings":
 					{
-						"buffer_size": 280,
+						"buffer_size": 1311,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								108,
-								108
+								1311,
+								1311
 							]
 						],
 						"settings":
 						{
-							"open_with_edit": true,
-							"syntax": "Packages/Text/Plain text.tmLanguage"
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "client/lib/dropFunctions.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1955,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1031,
+								1031
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": -0.0,
+						"translation.y": 204.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "client/templates/builder/builder.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1471,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1166,
+								1166
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 466.0,
+						"zoom_level": 1.0
+					},
 					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "client/templates/builder/Stock/Movements/movementInput.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 238,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								238,
+								238
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
 					"type": "text"
 				}
 			]

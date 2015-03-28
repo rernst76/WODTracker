@@ -30,13 +30,26 @@ Template.builder.helpers({
 });
 
 Template.builder.events({
-  'click #saveWorkout': function() {
+  'click #saveWorkout': function(e,template) {
     var rootId = Session.get('rootId');
+
+    // Set gym and date
     var workoutName = $('#workoutName').val();
     var gymName = $('#gymName').val();
     Workout.update({_id: rootId}, {$set: {name: workoutName,
                                            gym: gymName,
                                            date: new Date() }});
+
+    // Get values
+    Workout.find({_id: {$ne: rootId}}).forEach(function(obj){
+      var f1Val = template.$('#' + obj._id + '\\.f1').val();
+      Workout.update(obj,{$set: {'field1.value': f1Val}});
+      if (obj.field2) {
+        var f2Val = template.$('#' + obj._id + '\\.f2').val();
+        Workout.update(obj,{$set: {'field2.value': f2Val}});
+      }
+    });
+
     Meteor.call('insertWorkout', Workout.find().fetch(), rootId, 
       function(error) {
       if(error) {
