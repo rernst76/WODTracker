@@ -43,14 +43,17 @@ Template.builder.events({
         depthArr[1]++;
       }
 
-      // Add root attribute
-      Workout.update(obj,{$set: {root: rootId}});
+      // Add root attribute, and depth
+      Workout.update(obj,{$set: {root: rootId,
+                                 depth: depthArr[1]}});
 
       return depthArr;
     });
 
+    // Make object out of depth array
     depth = _.object(depth);
     
+    // Add gym, name, and depth array to root
     var workoutName = $('#workoutName').val();
     var gymName = $('#gymName').val();
     Workout.update({_id: rootId}, {$set: {name: workoutName,
@@ -67,6 +70,8 @@ Template.builder.events({
         Workout.update(obj,{$set: {'field2.value': f2Val}});
       }
     });
+
+    // Build Text description
 
     Meteor.call('insertWorkout', Workout.find().fetch(), rootId, 
       function(error) {
