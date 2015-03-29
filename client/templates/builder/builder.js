@@ -71,7 +71,21 @@ Template.builder.events({
       }
     });
 
-    // Build Text description
+    // Build Text description recursively
+    function buildText(objArr) {
+      return _.chain(objArr)
+        .map(function(obj) {
+          var indent = _.times(obj.depth, function() {return '\t';}).join('');
+          if (Workout.find({parent: obj._id}).count() > 0) {
+            return (indent + obj.name + '\n' + buildText(Workout.find({parent: obj._id}).fetch()));
+          }
+          return (indent + obj.name + '\n');
+          
+        })
+        .value().join('');
+    }
+    return console.log(buildText(Workout.find({parent: rootId}).fetch()));
+
 
     Meteor.call('insertWorkout', Workout.find().fetch(), rootId, 
       function(error) {
