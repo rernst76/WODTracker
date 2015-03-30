@@ -52,6 +52,25 @@ Template.builder.events({
 
     // Make object out of depth array
     depth = _.object(depth);
+
+    // Build Text description recursively
+    function buildText(objArr) {
+      return _.chain(objArr)
+        .map(function(obj) {
+          var indent = _.times(obj.depth, function() {return '\t';}).join('');
+          if (Workout.find({parent: obj._id}).count() > 0) {
+            return (indent + obj.name + '\n' + 
+              buildText(Workout.find({parent: obj._id}, 
+                                     {sort: {order: 1}}).fetch()));
+          }
+          return (indent + obj.name + '\n');
+          
+        })
+        .value().join('');
+    }
+
+    var textDesc = buildText(Workout.find({parent: rootId}, 
+                                          {sort: {order: 1}}).fetch());
     
     // Add gym, name, and depth array to root
     var workoutName = $('#workoutName').val();
@@ -59,7 +78,8 @@ Template.builder.events({
     Workout.update({_id: rootId}, {$set: {name: workoutName,
                                            gym: gymName,
                                            date: new Date(),
-                                           depth: depth }});
+                                           depth: depth,
+                                           text: textDesc }});
 
     // Get values
     Workout.find({_id: {$ne: rootId}}).forEach(function(obj){
@@ -70,21 +90,6 @@ Template.builder.events({
         Workout.update(obj,{$set: {'field2.value': f2Val}});
       }
     });
-
-    // Build Text description recursively
-    function buildText(objArr) {
-      return _.chain(objArr)
-        .map(function(obj) {
-          var indent = _.times(obj.depth, function() {return '\t';}).join('');
-          if (Workout.find({parent: obj._id}).count() > 0) {
-            return (indent + obj.name + '\n' + buildText(Workout.find({parent: obj._id}).fetch()));
-          }
-          return (indent + obj.name + '\n');
-          
-        })
-        .value().join('');
-    }
-    return console.log(buildText(Workout.find({parent: rootId}).fetch()));
 
 
     Meteor.call('insertWorkout', Workout.find().fetch(), rootId, 
